@@ -11,7 +11,11 @@ const ThingList: React.FC = () => {
   return (
     <div>
       <h4>List of Things</h4>
-      
+      <ul>
+        {things.map(thing => 
+          <li key={thing}>{thing}</li>
+        )}
+      </ul>
       <input value={thing} onChange={(e) => setThing(e.target.value)} />
       <button onClick={onClick}>Add Thing</button>
     </div>
