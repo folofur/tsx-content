@@ -36,7 +36,7 @@ class UserSearch extends Component<UserSearchProps> {
         onChange={(e) => this.setState({name: e.target.value})}
         placeholder="Type a name!"
       />
-      <button onClick={onSearch}>Find User</button>
+      <button onClick={this.onSearch}>Find User</button>
       <div>
         {this.state.user && this.state.user.name}
         
