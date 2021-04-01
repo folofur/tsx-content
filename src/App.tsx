@@ -3,6 +3,8 @@ import logo from "./logo.svg";
 import { Counter } from "./features/counter/Counter";
 import ThingList from "./list/ThingList";
 import Search from "./list/Search";
+
+import EventComponent from "./events/EventComponent";
 import "./App.css";
 
 function App() {
@@ -10,6 +12,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <EventComponent />
         <Counter />
         <ThingList />
         <Search />
