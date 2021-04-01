@@ -10,7 +10,19 @@ const users = [
 const Search: React.FC = () => {
   const [name, setName] = useState("");
 
-  const onSearch = () => {};
+  // for foundUser, it has possibility to be undefined or an object 
+  // so here we initialize state with generic type (object and undefined)
+  const [foundUser, setFoundUser] = useState<{name: string, age: number} | undefined>();
+
+  const onSearch = () => {
+    const foundUser = users.find((user) => {
+      return user.name === name;
+    });
+
+    setFoundUser(foundUser);
+
+
+  };
   return (
     <div>
       Search
@@ -20,6 +32,10 @@ const Search: React.FC = () => {
         placeholder="Type a name!"
       />
       <button onClick={onSearch}>Find User</button>
+      <div>
+        {foundUser && foundUser.name}
+        
+      </div>
     </div>
   );
 };
