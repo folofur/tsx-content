@@ -2,6 +2,7 @@ import React from "react";
 import logo from "./logo.svg";
 import { Counter } from "./features/counter/Counter";
 import ThingList from "./list/ThingList";
+import Search from "./list/Search";
 import "./App.css";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
         <ThingList />
+        <Search />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
